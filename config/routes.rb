@@ -3,6 +3,10 @@ root "pictures#index"
 
 get 'pictures' => "pictures#index"
 
+
+get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
+patch 'pictures/:id' => "pictures#update"
+
 get 'pictures/new' => "pictures#new"
 post 'pictures' => "pictures#create"
 
